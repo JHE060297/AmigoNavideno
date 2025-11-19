@@ -1,218 +1,208 @@
+/* =======================
+   ESTILOS GENERALES
+========================= */
+
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #0d47a1, #1e88e5);
-  color: #222;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #0d47a1, #1e88e5);
+    color: #222;
 }
 
-/* Header principal */
+/* =======================
+   HEADER
+========================= */
 
 .main-header {
-  text-align: center;
-  padding: 20px 15px;
-  background: rgba(0, 0, 0, 0.15);
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  backdrop-filter: blur(6px);
+    text-align: center;
+    padding: 20px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(6px);
 }
 
 .main-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
+    margin: 0;
+    font-size: 1.8rem;
 }
 
 .subtitle {
-  margin: 5px 0 0;
-  font-size: 0.95rem;
+    margin: 5px 0 0;
+    font-size: 0.95rem;
 }
 
-/* Pantallas */
+/* =======================
+   CONTENEDORES
+========================= */
 
 .screen {
-  display: none;
-  padding: 20px;
+    padding: 20px;
 }
 
-.screen.active {
-  display: block;
+.board-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Pantalla de salas */
-
-#roomScreen {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.room-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  padding: 20px;
-  width: 320px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-.room-card h2 {
-  margin-top: 0;
-}
-
-.room-hint {
-  font-size: 0.85rem;
-  color: #555;
-}
-
-/* Botones, inputs */
-
-button {
-  background: #2e7d32;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.95rem;
-}
-
-button:hover {
-  background: #1b5e20;
-}
-
-.secondary-btn {
-  background: #c62828;
-}
-
-.secondary-btn:hover {
-  background: #8e0000;
+.controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 input,
 select {
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 0.95rem;
-  width: 100%;
-  margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
-/* Header del tablero */
-
-#boardScreen {
-  padding: 20px 10px 30px;
+button {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s ease;
 }
 
-.board-header {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  padding: 10px 12px;
-  margin-bottom: 15px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+button:hover {
+    background: #1b5e20;
 }
 
-.board-header .room-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-.board-header .controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-#personajeSelect {
-  width: 300px;
-}
-
-#editKeyInput {
-  width: 190px;
-}
-
-/* Tablero tipo Trello */
+/* =======================
+   TABLERO DE ESCRITORIO
+========================= */
 
 #board {
-  display: flex;
-  gap: 16px;
-  padding: 10px;
-  overflow-x: auto;
+    display: flex;
+    gap: 16px;
+    padding: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 }
 
+#board::-webkit-scrollbar {
+    height: 10px;
+}
+
+#board::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+/* =======================
+   TARJETAS
+========================= */
+
 .column {
-  background: rgba(255, 255, 255, 0.97);
-  width: 260px;
-  min-width: 260px;
-  padding: 12px;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-  position: relative;
+    background: rgba(255, 255, 255, 0.97);
+    width: 260px;
+    min-width: 260px;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    position: relative;
+
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.column::-webkit-scrollbar {
+    width: 8px;
+}
+
+.column::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
 }
 
 .column h2 {
-  text-align: center;
-  margin: 0 0 8px;
-  font-size: 1.1rem;
+    text-align: center;
+    margin: 0 0 8px;
+    font-size: 1.1rem;
 }
 
-.column h2::before {
-  content: "🎁 ";
+.lock-badge {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 0.8rem;
+    background: #ffeb3b;
+    padding: 2px 6px;
+    border-radius: 10px;
 }
-
-.column .lock-badge {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  font-size: 0.8rem;
-  background: #ffeb3b;
-  padding: 2px 6px;
-  border-radius: 10px;
-}
-
-/* Inputs de opciones */
 
 .opcion-input {
-  width: 100%;
-  margin-bottom: 6px;
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
 }
 
 .saveBtn {
-  width: 100%;
-  margin-top: 4px;
+    width: 100%;
+    margin-top: 4px;
 }
 
 .opciones-list {
-  margin-top: 10px;
-  background: #f0f4c3;
-  padding: 8px;
-  border-radius: 8px;
-  font-size: 0.95rem;
+    margin-top: 12px;
+    background: #f7f7c5;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.95rem;
 }
 
 .opciones-list p {
-  margin: 4px 0;
+    margin: 6px 0;
 }
 
-/* Responsive */
+/* =======================
+   RESPONSIVE MÓVIL
+========================= */
 
 @media (max-width: 600px) {
-  .board-header .controls {
-    flex-direction: column;
-    align-items: stretch;
-  }
 
-  #personajeSelect,
-  #editKeyInput {
-    width: 100%;
-  }
+    /* Controles en columna */
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #personajeSelect,
+    #editKeyInput,
+    #addPersonajeBtn {
+        width: 100%;
+    }
+
+    /* 🔥 EL CAMBIO IMPORTANTE — TABLERO VERTICAL */
+    #board {
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-height: 75vh;
+        padding-right: 10px;
+    }
+
+    /* Las tarjetas ocupan TODA la pantalla a lo ancho */
+    .column {
+        width: 100%;
+        min-width: 100%;
+        max-height: none;
+        margin-bottom: 20px;
+    }
 }
