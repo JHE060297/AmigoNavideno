@@ -21,12 +21,13 @@ let characters = []; // Lista de personajes del tablero global
 // 1. CARGAR DICCIONARIO PERSONAJES
 // ===========================
 function initPersonajesSelect() {
-    personajeSelect.innerHTML = "";
+    const dataList = document.getElementById("listaPersonajes");
+    dataList.innerHTML = "";
+
     PERSONAJES.forEach((p) => {
         const opt = document.createElement("option");
         opt.value = p;
-        opt.textContent = p;
-        personajeSelect.appendChild(opt);
+        dataList.appendChild(opt);
     });
 }
 

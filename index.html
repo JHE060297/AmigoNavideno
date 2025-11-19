@@ -10,7 +10,7 @@
 
 <body>
     <header class="main-header">
-        <h1>🎄 Amigo Navideño - Tablero Único</h1>
+        <h1>🎄 Amigo Navideño 🎄</h1>
         <p class="subtitle">Selecciona un personaje y agrega sus 3 opciones</p>
     </header>
 
@@ -18,7 +18,8 @@
     <section id="boardScreen" class="screen active">
         <div class="board-header">
             <div class="controls">
-                <select id="personajeSelect"></select>
+                <input id="personajeSelect" list="listaPersonajes" placeholder="Elige o escribe un personaje..." />
+                <datalist id="listaPersonajes"></datalist>
                 <input id="editKeyInput" type="password" placeholder="Clave opcional para editar" />
                 <button id="addPersonajeBtn">Agregar personaje</button>
             </div>
