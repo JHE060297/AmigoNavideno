@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0d47a1, #1e88e5);
+  color: #222;
+}
+
+/* Header principal */
+
+.main-header {
+  text-align: center;
+  padding: 20px 15px;
+  background: rgba(0, 0, 0, 0.15);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  margin: 5px 0 0;
+  font-size: 0.95rem;
+}
+
+/* Pantallas */
+
+.screen {
+  display: none;
+  padding: 20px;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* Pantalla de salas */
+
+#roomScreen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.room-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.room-card h2 {
+  margin-top: 0;
+}
+
+.room-hint {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Botones, inputs */
+
+button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+.secondary-btn {
+  background: #c62828;
+}
+
+.secondary-btn:hover {
+  background: #8e0000;
+}
+
+input,
+select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Header del tablero */
+
+#boardScreen {
+  padding: 20px 10px 30px;
+}
+
+.board-header {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.board-header .room-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.board-header .controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#personajeSelect {
+  width: 180px;
+}
+
+#editKeyInput {
+  width: 190px;
+}
+
+/* Tablero tipo Trello */
+
+#board {
+  display: flex;
+  gap: 16px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.column {
+  background: rgba(255, 255, 255, 0.97);
+  width: 260px;
+  min-width: 260px;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.column h2 {
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.column h2::before {
+  content: "🎁 ";
+}
+
+.column .lock-badge {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 0.8rem;
+  background: #ffeb3b;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+/* Inputs de opciones */
+
+.opcion-input {
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.saveBtn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.opciones-list {
+  margin-top: 10px;
+  background: #f0f4c3;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.opciones-list p {
+  margin: 4px 0;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .board-header .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #personajeSelect,
+  #editKeyInput {
+    width: 100%;
+  }
+}

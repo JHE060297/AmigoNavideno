@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amigo Navideño - Tablero Global</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>🎄 Amigo Navideño - Tablero Único</h1>
+        <p class="subtitle">Selecciona un personaje y agrega sus 3 opciones</p>
+    </header>
+
+
+    <section id="boardScreen" class="screen active">
+        <div class="board-header">
+            <div class="controls">
+                <select id="personajeSelect"></select>
+                <input id="editKeyInput" type="password" placeholder="Clave opcional para editar" />
+                <button id="addPersonajeBtn">Agregar personaje</button>
+            </div>
+        </div>
+        <main id="board"></main>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="data/personajes.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
