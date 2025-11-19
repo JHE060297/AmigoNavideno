@@ -1,8 +1,8 @@
 // ===========================
 //  CONFIGURACIÓN SUPABASE
 // ===========================
-// const supabaseUrl = "https://frqbqmadtfmelbhncvkk.supabase.co";
-// const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZycWJxbWFkdGZtZWxiaG5jdmtrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1MjI3MTksImV4cCI6MjA3OTA5ODcxOX0.xkU0JpZ9zIycNLuI4H6NpbUcMTF3x9ZnoHJh8-FyGyM";
+const supabaseUrl = 'process.env.SUPABASE_URL';
+const supabaseKey = 'process.env.SUPABASE_URL';
 
 const { createClient } = supabase;
 const db = createClient(supabaseUrl, supabaseKey);
