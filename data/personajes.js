@@ -1,48 +1,54 @@
 
 const PERSONAJES = [
-    // Anime
-    "Naruto",
-    "Sasuke",
-    "Sakura",
-    "Kakashi",
-    "Goku",
-    "Vegeta",
-    "Luffy",
-    "Zoro",
-    "Tanjiro",
-    "Nezuko",
+    // --- Anime ---
+    "Naruto", "Sasuke", "Sakura", "Kakashi",
+    "Goku", "Vegeta", "Gohan",
+    "Luffy", "Zoro", "Nami",
+    "Tanjiro", "Nezuko", "Inosuke",
 
-    // Superhéroes
-    "Deadpool",
-    "Batman",
-    "Superman",
-    "Wonder Woman",
-    "Spiderman",
-    "Iron Man",
-    "Captain America",
-    "Thor",
-    "Hulk",
+    // --- Superhéroes ---
+    "Batman", "Superman", "Wonder Woman",
+    "Spiderman", "Iron Man", "Captain America",
+    "Thor", "Hulk", "Deadpool",
 
-    // Fantasía / Sci-Fi
-    "Gandalf",
-    "Frodo",
-    "Legolas",
-    "Yoda",
-    "Darth Vader",
-    "Luke Skywalker",
-    "Grogu",
+    // --- Star Wars ---
+    "Yoda", "Darth Vader", "Luke Skywalker",
+    "Leia", "Grogu (Baby Yoda)", "Obi-Wan Kenobi",
 
-    // Clásicos / Random
-    "Jack Sparrow",
-    "Shrek",
-    "Fiona",
-    "Harry Potter",
-    "Hermione",
-    "Ron Weasley",
+    // --- Pixar ---
+    "Woody", "Buzz Lightyear", "Mike Wazowski",
+    "Sully", "Mr. Increíble", "Elastigirl",
 
-    // Temática navideña
-    "Santa Claus",
-    "El Grinch",
-    "Rudolph",
-    "Duende Navideño"
+    // --- Princesas Disney 👑 ---
+    "Ariel", "Bella", "Cenicienta", "Aurora",
+    "Jazmín", "Mulán", "Pocahontas",
+    "Tiana", "Rapunzel", "Merida",
+    "Moana", "Elsa", "Anna",
+
+    // --- Mickey & Friends 🐭 ---
+    "Mickey Mouse", "Minnie Mouse",
+    "Donald Duck", "Daisy Duck",
+    "Goofy", "Pluto",
+
+    // --- Hello Kitty & Sanrio 🎀 ---
+    "Hello Kitty", "My Melody",
+    "Kuromi", "Keroppi", "Badtz-Maru",
+    "Cinnamoroll", "Pompompurin",
+
+    // --- Clásicos y Fantasía ---
+    "Shrek", "Fiona", "Burro",
+    "Harry Potter", "Hermione", "Ron Weasley",
+    "Gandalf", "Frodo", "Legolas",
+
+    // --- Marvel / Extra ---
+    "Black Widow", "Scarlet Witch", "Ant-Man",
+    "Loki", "Thanos",
+
+    // --- Navidad 🎅 ---
+    "Santa Claus", "El Grinch", "Rudolph",
+    "Duende Navideño", "Frosty",
+
+    // --- Otros icónicos para juegos ---
+    "Sonic", "Mario", "Luigi", "Peach",
+    "Bowser", "Pikachu", "Kirby"
 ];
